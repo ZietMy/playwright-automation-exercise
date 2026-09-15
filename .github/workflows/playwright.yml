@@ -28,6 +28,7 @@ jobs:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: npx playwright test
 
+
     # Báo cáo 1: Tạo Allure Report
     - name: Generate Allure Report
       if: ${{ !cancelled() }}
