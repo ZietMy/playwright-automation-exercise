@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2449","TC01 - Verify Home Page Load and Signup link is visible","chromium","2026-09-16","passed","2026-09-16","Home Page Tests","home.spec.ts","",""
+"","10182","TC02 - Full User Registration Process Successfully","chromium","2026-09-16","passed","2026-09-16","User Registration Flow","signup.spec.ts","",""
+"","2","TC02 - Full User Registration Process Successfully","firefox","2026-09-16","failed","2026-09-16","User Registration Flow","signup.spec.ts","",""
+"","2","TC02 - Full User Registration Process Successfully","webkit","2026-09-16","failed","2026-09-16","User Registration Flow","signup.spec.ts","",""
+"","2","TC01 - Verify Home Page Load and Signup link is visible","firefox","2026-09-16","failed","2026-09-16","Home Page Tests","home.spec.ts","",""
+"","2","TC01 - Verify Home Page Load and Signup link is visible","webkit","2026-09-16","failed","2026-09-16","Home Page Tests","home.spec.ts","",""
