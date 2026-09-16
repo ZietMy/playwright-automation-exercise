@@ -11,7 +11,7 @@ Cross-Browser & Parallel Execution: Hỗ trợ chạy kịch bản song song tr�
 
 🛠️ Công nghệ sử dụng (Tech Stack)
 Core Framework: Playwright (TypeScript)
-AI Integration: OpenAI API
+AI Integration: gemiNI API
 Reporting: Allure Report, Playwright HTML Report
 CI/CD: GitHub Actions, GitHub Pages
 Package Manager: npm

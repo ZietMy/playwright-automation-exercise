@@ -39,7 +39,7 @@ export class LoginPage extends BasePage {
     this.signupBtn = page.getByRole('button', { name: 'Signup' });
 
     // Detailed Registration Form
-    this.enterAccountInfoHeading = page.getByText('ENTER ACCOUNT INFORMATION');
+    this.enterAccountInfoHeading = page.getByRole('heading', { name: 'Enter Account Information' });
     this.titleMrRadio = page.getByLabel('Mr.');
     this.passwordInput = page.getByLabel('Password *');
     this.daysSelect = page.locator('#days');
@@ -50,7 +50,8 @@ export class LoginPage extends BasePage {
     this.firstNameInput = page.getByLabel('First name *');
     this.lastNameInput = page.getByLabel('Last name *');
     // this.companyInput = page.getByLabel('Company');
-    this.addressInput = page.getByLabel('Address * (Street address, P.O. box, company name, c/o)');
+    // this.addressInput = page.getByLabel('Address * (Street address, P.O. Box, Company name, etc.)');
+    this.addressInput= page.locator('[data-qa="address"]');
     this.countrySelect = page.getByLabel('Country *');
     this.stateInput = page.getByLabel('State *');
     this.cityInput = page.getByLabel('City *');

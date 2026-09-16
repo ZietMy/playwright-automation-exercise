@@ -12,10 +12,11 @@
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.20.2",
     "allure-commandline": "^2.43.0",
-    "allure-playwright": "^3.12.1"
+    "allure-playwright": "^3.12.1",
+    "tsx": "^4.23.13"
   },
   "dependencies": {
-    "dotenv": "^17.4.2",
-    "openai": "^7.15.0"
+    "@google/genai": "^2.22.0",
+    "dotenv": "^17.4.2"
   }
 }

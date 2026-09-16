@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 permissions:
   contents: write
-  page: write
+  pages: write
   id-token: write
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       run: npx playwright install --with-deps chromium
     - name: Run Playwright tests
       env:
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: npx playwright test
 
 

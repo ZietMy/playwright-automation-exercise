@@ -1,13 +1,8 @@
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
-import path from 'path';
 
-// Load biến môi trường từ file .env
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+dotenv.config();
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export interface UserProfile {
   name: string;
@@ -47,16 +42,16 @@ export async function generateRandomUser(): Promise<UserProfile> {
   }`;
 
   try {
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [{ role: 'user', content: prompt }],
-      temperature: 0.8,
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.6-flash',
+      contents: prompt,
+      config: {
+        responseMimeType: 'application/json', // Ép Gemini luôn trả về dạng JSON chuẩn
+      },
     });
 
-    const content = response.choices[0].message.content || '{}';
-    // Clean response nếu AI vô tình trả về markdown backticks
-    const cleanedContent = content.replace(/```json/g, '').replace(/```/g, '').trim();
-    const data = JSON.parse(cleanedContent);
+    const content = response.text || '{}';
+    const data = JSON.parse(content);
 
     // Gắn thêm timestamp vào email để đảm bảo luôn duy nhất khi chạy test nhiều lần
     data.email = `qa_ai_${timestamp}@example.com`;
