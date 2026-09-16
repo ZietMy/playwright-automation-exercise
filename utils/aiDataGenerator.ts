@@ -13,6 +13,7 @@ export interface UserProfile {
   year: string;
   firstName: string;
   lastName: string;
+  company?: string; // Optional field for company
   address: string;
   country: string;
   state: string;
@@ -33,6 +34,7 @@ export async function generateRandomUser(): Promise<UserProfile> {
     "year": "1980" to "2000",
     "firstName": "First Name",
     "lastName": "Last Name",
+    "company": "Tech Corp (optional)",
     "address": "Street Address",
     "country": "United States",
     "state": "State Name",
