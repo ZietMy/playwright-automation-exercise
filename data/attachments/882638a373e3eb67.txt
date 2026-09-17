@@ -1,0 +1,17 @@
+AI Data generation failed. Falling back to default test data: ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 53.471470904s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-3.6-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"53s"}]}}
+    at throwErrorIfNotOK (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/@google/genai/dist/node/index.cjs:14112:30)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at /home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/@google/genai/dist/node/index.cjs:13775:13
+    at Models.generateContent (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/@google/genai/dist/node/index.cjs:15243:24)
+    at generateRandomUser (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/utils/aiDataGenerator.ts:47:22)
+    at /home/runner/work/playwright-automation-exercise/playwright-automation-exercise/tests/checkout.spec.ts:48:22
+    at /home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1655:9
+    at /home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1135:11
+    at TimeoutManager.withRunnable (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:403:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1133:7)
+    at /home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1653:7
+    at WorkerMain._runTest (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1626:5)
+    at WorkerMain.runTestGroup (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/worker/workerProcessEntry.js:1521:9)
+    at process.<anonymous> (/home/runner/work/playwright-automation-exercise/playwright-automation-exercise/node_modules/playwright/lib/common/index.js:1941:25) {
+  status: 429
+}
